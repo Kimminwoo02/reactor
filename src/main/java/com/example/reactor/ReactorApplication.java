@@ -3,11 +3,14 @@ package com.example.reactor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
 public class ReactorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReactorApplication.class, args);
+		var publisher = new Publisher();
+		publisher.startFlux()
+						.subscribe(System.out::println);
+
+		System.out.println(" Do it");
 	}
 
 }
