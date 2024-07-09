@@ -11,6 +11,9 @@ public class ReactorApplication {
 						.subscribe(System.out::println);
 
 		System.out.println(" Do it");
+
+		publisher.startMono()
+				.subscribe();
 	}
 
 }
